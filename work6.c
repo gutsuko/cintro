@@ -16,14 +16,15 @@ int main(){
   int in, fact;
   printf("Type in a number: ");
   scanf("%d", &in);
-  if(in == 1){ printf("1 is not prime.\n"); return 0;}
+  if(in == 1){ printf("%d\n", in); return 0;}
   fact = getSmallestFactor(in);
   if(fact > 0){
-    printf("%d is not prime. It can be divided by %d.\n", in, fact);
-  }else{
-    printf("%d is prime.\n", in);
+    while(fact > 0){
+      printf("%d*", fact);
+      in = in/fact;
+      fact = getSmallestFactor(in);
+    }
+    printf("%d\n", in);
   }
   return 0;
 }
-
-

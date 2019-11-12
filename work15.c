@@ -15,16 +15,16 @@ emailbook = (personData*)malloc(sizeof(personData) * friendsNum);
 friends = emailbook;
 for(i = 0; i < 3; i++){
   printf("What is the name of friend %i?\n", i);
-  scanf("%s", (*friends).name);
-  printf("What is the email address of %s?\n", (*friends).name);
-  scanf("%s", (*friends).email);
+  scanf("%s", friends->name);
+  printf("What is the email address of %s?\n", friends->name);
+  scanf("%s", friends->email);
   friends++;
 }
 printf("\n");
 friends = emailbook;
 for(i = 0; i < 3; i++){
-  printf("Friend %d: %s, ", i, (*friends).name);
-  printf("lives in %s\n", (*friends).email);
+  printf("Friend %d: %s, ", i, friends->name);
+  printf("lives in %s\n", friends->email);
   friends++;
 }
 }

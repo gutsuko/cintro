@@ -31,5 +31,6 @@ int main(){
         printf("*(s+2): %c\n\n", *(s+2));
 
         *(s+3) = 'T';
+        *(s+4) = 'W';
         printf("s: %s\n", s);
 }
